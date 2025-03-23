@@ -8,13 +8,14 @@ import org.springframework.stereotype.Component;
 
 @Component
 public class User {
-
+    @Autowired
     Order order;
 
 
 
-    public User(@Qualifier("offlineOrder") Order order){
+    public User(Order order){
         this.order = order;
+        System.out.println("User initialized");
     }
 
 }
